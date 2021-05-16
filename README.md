@@ -36,3 +36,11 @@ _Al ejecutar el proyecto se levanta un servidor tomcat de springboot el cual est
 
 _Seleccionar el IndicadoresController y comenzar a realizar pruebas._
 <img src="https://i.imgur.com/gPUDd0J.png"/>
+
+## Pruebas de calidad de código 📋
+
+_Para realizar pruebas de codigo se agregaron dependencias de Sonarqube al proyecto. para ejecutarlo debe ejecutar_
+
+```
+mvn clean install sonar:sonar
+```
