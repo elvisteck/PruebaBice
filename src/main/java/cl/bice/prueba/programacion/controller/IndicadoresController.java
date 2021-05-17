@@ -44,11 +44,11 @@ public class IndicadoresController {
 	@ApiOperation(value = "Servicio que devuelve 3 indicadores especificos del ultimo dia", response = IndicadoresResponse.class)
 	public ResponseEntity<IndicadoresResponse> obtenerUltimos() {
 		IndicadoresResponse rs = null;
-		LOGGER.info("Detalle de los últimos indicadores {}");
+		LOGGER.info("Detalle de los últimos indicadores");
 		try {
 			rs = client.getUltimosIndicadores();
 		} catch (Exception e) {
-			LOGGER.error("Falla con consultar ultimos indicadores {}");
+			LOGGER.error("Falla con consultar ultimos indicadores");
 			return new ResponseEntity<IndicadoresResponse>(HttpStatus.INTERNAL_SERVER_ERROR); 
 		}
 		return new ResponseEntity<IndicadoresResponse>(rs, HttpStatus.OK);
@@ -64,11 +64,11 @@ public class IndicadoresController {
 	@ApiOperation(value = "Retorna un indicador de una fecha especifica obtenido a traves de su sombre", response = IndicadoresResponse.class)
 	public ResponseEntity<Generico> obtenerEspecifico(@PathVariable(name = "key") String key, String date) {
 		Generico rs = null;
-		LOGGER.info("Detalle de un indicador especifico {}");
+		LOGGER.info("Detalle de un indicador especifico");
 		try {
 			rs = client.getEspecificoPorFecha(key,date);
 		} catch (Exception e) {
-			LOGGER.error("Falla al consultar indicador especifico {}");
+			LOGGER.error("Falla al consultar indicador especifico");
 			return new ResponseEntity<Generico>(HttpStatus.INTERNAL_SERVER_ERROR); 
 		}
 		return new ResponseEntity<Generico>(rs, HttpStatus.OK);

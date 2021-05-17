@@ -6,9 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Dolar{
-    public String key;
-    public String name;
-    public String unit;
-    public int date;
-    public double value;
+	private String key;
+	private String name;
+	private String unit;
+	private int date;
+	private double value;
 }
